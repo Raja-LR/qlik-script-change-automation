@@ -169,7 +169,7 @@
 
             output.textContent = ''; // Clear previous output
 
-            const regexPattern = \[(lib|LIB\$)[^\]]*\];
+            const regexPattern = /\[(lib|LIB\$)[^\]]*\]/;
             const files = Array.from(fileInput.files);
 
             files.forEach(file => {
