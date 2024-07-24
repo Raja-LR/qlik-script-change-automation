@@ -148,7 +148,6 @@
         }
         .output-section {
             max-height: 300px; /* Fixed height for consistent output section */
-	    max-width: 500px;
             overflow-y: auto; /* Added scrollbar for overflow */
 	    overflow-x: auto; /* Added scrollbar for overflow */
         }
@@ -163,7 +162,19 @@
             gap: 20px;
             height: 100%; /* Ensure it fills the output section */
         }
-        .output-container .output-column {
+        .output-container .output-column1 {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #e0f7fa;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+	.output-container .output-column2 {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #e0f7fa;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+	.output-container .output-column3 {
             padding: 10px;
             border-radius: 10px;
             background-color: #e0f7fa;
@@ -182,15 +193,15 @@
             <button id="extractButton"><i class="fas fa-search"></i> Extract </button>
             <div class="output-section">
                 <div class="output-container">
-                    <div class="output-column" id="outputExtractFrom">
+                    <div class="output-column1" id="outputExtractFrom">
                         <h2>Source QVDs</h2>
                         <pre></pre>
                     </div>
-                    <div class="output-column" id="outputExtractInto">
+                    <div class="output-column1" id="outputExtractInto">
                         <h2>Target QVDs</h2>
                         <pre></pre>
                     </div>
-                    <div class="output-column" id="outputExtractOthers">
+                    <div class="output-column3" id="outputExtractOthers">
                         <h2>Source files</h2>
                         <pre></pre>
                     </div>
