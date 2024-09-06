@@ -228,7 +228,8 @@
             outputInto.textContent = ''; // Clear previous output
             outputOthers.textContent = ''; // Clear previous output
 
-            const regexPattern = /\b(from|into)\s+\[(lib|LIB|\$|[^\]]*\$[^\]]*\)|[^\]]*\$[^\]]*\)).*\.(csv|qvd|txt|xlxs|xlsx)/gi; // Added case-insensitive flag 'i'
+            //const regexPattern = /\b(from|into)\s+\[(lib|LIB|\$|[^\]]*\$[^\]]*\)|[^\]]*\$[^\]]*\)).*\.(csv|qvd|txt|xlxs|xlsx)/gi; // Added case-insensitive flag 'i'
+            const regexPattern = /(?<=\b(from|into)\b\s*$[\r\n]*)?\b(from|into)\s+\[(lib|LIB|\$|[^\]]*\$[^\]]*\)|[^\]]*\$[^\]]*\)).*\.(csv|qvd|txt|xlxs|xlsx)/gi; // Added case-insensitive flag 'i'
             const varPattern = /(\w+)\s*=\s*([^\s]+)/g; // Pattern to extract variables and values
             const files = Array.from(fileInput.files);
             const uniqueMatchesFrom = new Set();
